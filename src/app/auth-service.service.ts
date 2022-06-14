@@ -25,7 +25,6 @@ export class AuthServiceService {
     /*  headers.append('Access-Control-Allow-Origin' , '*');
       headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
       //headers = headers.set('Content-Type', 'application/json; charset=utf-8').set('Authorization','Basic'+btoa(username+":"+password));*/
-      /*headers.append('Authorization', 'Basic '+'c2FsaXlhQGJ1eWVyOmNhcmR0cmFkZQ==');
       let creds = 'Username=' + username + "Password=" + password;*/
       this.http.get('https://cors-anywhere.herokuapp.com/'+apiUrl+this.datakey,{headers: headers}).subscribe(res =>{
         resolve(res);
