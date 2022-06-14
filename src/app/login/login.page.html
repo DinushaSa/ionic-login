@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="form">
+<ion-item>
+  <ion-label position="stacked">Username</ion-label>
+  <ion-input [(ngModel)] ='username'></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label position="stacked">Password</ion-label>
+  <ion-input [(ngModel)] ='password' type="password"></ion-input>
+</ion-item>
+<ion-button expand="block" (click)="login()">Login</ion-button>
+<br>
+  </div>
+  <ion-card>
+   <h2>API Version: {{versionData}}</h2> 
+   <h2>Object:</h2>
+   <p *ngFor="let item of objectData">{{item}}</p>
+  </ion-card>
+
+</ion-content>
