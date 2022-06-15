@@ -1,0 +1,17 @@
+{
+  "name": "restapi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies":[
+
+      {
+        "name": "restapi",
+        "app_id": "xyz-projectid",
+        "v2": true,
+        "typescript": true
+      }
+    
+  ]
+}
