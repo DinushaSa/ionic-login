@@ -15,8 +15,6 @@ export class AuthServiceService {
   getLogin(username:string, password:string){
     return new Promise ((resolve, reject) => {
     let headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8','Authorization': 'Basic '+btoa(username + ':'  +password)});
-
-      let creds = 'Username=' + username + "Password=" + password;*/
       this.http.get(apiUrl+this.datakey,{headers: headers}).subscribe(res =>{
         resolve(res);
     },(err) => {
