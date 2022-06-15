@@ -17,7 +17,7 @@ export class AuthServiceService {
     let headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8','Authorization': 'Basic '+btoa(username + ':'  +password)});
 
       let creds = 'Username=' + username + "Password=" + password;*/
-      this.http.get('https://cors-anywhere.herokuapp.com/'+apiUrl+this.datakey,{headers: headers}).subscribe(res =>{
+      this.http.get(apiUrl+this.datakey,{headers: headers}).subscribe(res =>{
         resolve(res);
     },(err) => {
       reject(err);
