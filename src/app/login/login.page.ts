@@ -17,14 +17,9 @@ export class LoginPage implements OnInit {
   }
   login(){
     this.auth.getLogin(this.username, this.password).then((result) => {
-      console.log("Login works");
-      console.log(result);
       this.versionData= result['apiVersion'];
-      console.log(this.versionData);
        this.objectData = result['objectType'];
-       console.log(this.objectData);
     }, (err) => {
-      console.log(err);
     });
   }
 
